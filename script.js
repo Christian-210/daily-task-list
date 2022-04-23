@@ -26,6 +26,10 @@ function addNewLi() {
   if (input.value.length > 0) {
     const li = document.createElement("li");
     li.classList.add("animate__animated", "animate__fadeInUp");
+    setTimeout(() => {
+      li.classList.remove("animate__fadeInUp");
+    }, 1000);
+
     li.textContent = input.value;
     ul.appendChild(li);
     input.value = "";
